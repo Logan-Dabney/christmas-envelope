@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0a1530">
+  <title>A Letter from the North Pole</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎁</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Mountains+of+Christmas:wght@700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="reveal.css">
+</head>
+<body>
+  <canvas id="sky" class="sky" aria-hidden="true"></canvas>
+  <div id="lights" class="lights" aria-hidden="true"></div>
+  <button id="sound" class="sound" type="button" aria-pressed="true" aria-label="Sound on">🔔</button>
+  <div id="test-ribbon" class="test-ribbon" hidden>TEST · not the real draw</div>
+
+  <main class="stage">
+    <header id="intro" class="intro">
+      <p class="kicker">Special delivery from the North Pole</p>
+      <h1 id="greeting">Ho ho ho!</h1>
+    </header>
+
+    <div id="scene" class="scene">
+      <div id="envelope" class="envelope">
+        <div class="env-back"></div>
+        <div class="letter"><span>🎄 Secret Santa 🎄</span></div>
+        <div class="env-pocket">
+          <svg class="folds" viewBox="0 0 100 66" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 66 L50 34 L100 66" />
+          </svg>
+          <p class="addressed">for <span id="for-name"></span></p>
+        </div>
+        <div class="env-flap"></div>
+        <button id="seal" class="seal" type="button" aria-label="Break the wax seal to open your envelope">
+          <span class="seal-half seal-left"></span>
+          <span class="seal-half seal-right"></span>
+        </button>
+      </div>
+      <p id="hint" class="hint">Tap the wax seal to open</p>
+    </div>
+
+    <section id="card" class="card" hidden>
+      <div class="card-inner">
+        <p class="card-star" aria-hidden="true">⭐</p>
+        <p class="card-kicker">This Christmas, you are Secret Santa for…</p>
+        <div id="name-box" class="name-box">
+          <p id="recipient" class="recipient" aria-hidden="true"></p>
+          <canvas id="frost" class="frost" aria-hidden="true"></canvas>
+        </div>
+        <p id="frost-hint" class="frost-hint">
+          Wipe away the frost with your finger ❄️
+          <button id="skip-frost" class="link-button" type="button">or tap here to melt it</button>
+        </p>
+        <div id="details" class="details" hidden>
+          <dl id="facts" class="facts"></dl>
+          <p id="note" class="note" hidden></p>
+          <p class="secret">🤫 Shhh… keep it a secret!</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="lost" class="lost" hidden>
+      <p class="lost-icon" aria-hidden="true">☃️</p>
+      <h1>This envelope lost its way in the snow</h1>
+      <p>Open the link from your email again, and make sure the whole link came along, including everything after the <strong>#</strong>.</p>
+    </section>
+  </main>
+
+  <svg class="ground" viewBox="0 0 1200 140" preserveAspectRatio="none" aria-hidden="true">
+    <path class="hill-back" d="M0 70 C 200 20, 380 90, 600 55 S 1000 20, 1200 60 L1200 140 L0 140 Z" />
+    <path class="hill-front" d="M0 105 C 260 60, 520 120, 760 92 S 1080 70, 1200 98 L1200 140 L0 140 Z" />
+  </svg>
+  <canvas id="confetti" class="confetti" aria-hidden="true"></canvas>
+
+  <script type="module" src="reveal.js"></script>
+</body>
+</html>
